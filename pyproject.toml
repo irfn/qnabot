@@ -6,10 +6,12 @@ authors = ["Irfan Shah <irfan@pinelabs.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "~3.12"
 python-environ = "^0.4.54"
-litellm = "^1.42.5"
-ollama = "^0.3.1"
+pyautogen = {extras = ["retrievechat"], version = "^0.2.33"}
+unstructured = {extras = ["all-docs"], version = "^0.15.0"}
+chromadb = "^0.5.5"
+litellm = {extras = ["proxy"], version = "^1.42.5"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
