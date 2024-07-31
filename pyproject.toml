@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "qnabot"
+version = "0.1.0"
+description = ""
+authors = ["Irfan Shah <irfan@pinelabs.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-environ = "^0.4.54"
+litellm = "^1.42.5"
+ollama = "^0.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
