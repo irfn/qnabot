@@ -11,7 +11,7 @@ local_llm_config = {
             "price": [0, 0],  # Put in price per 1K tokens [prompt, response] as free!
         }
     ],
-    "cache_seed": None,  # Turns off caching, useful for testing different models
+    # "cache_seed": None,  # Turns off caching, useful for testing different models
 }
 
 # Create the agent that uses the LLM.
@@ -27,9 +27,9 @@ ragproxyagent = RetrieveUserProxyAgent(
     name="ragproxyagent",
     retrieve_config={
         "task": "qa",
-        "docs_path": "./ISO_27001_Standard.pdf",
+        "docs_path": "https://guides.rubyonrails.org/v6.1/association_basics.html",
     },
 )
 assistant.reset()
 
-ragproxyagent.initiate_chat(assistant, message=ragproxyagent.message_generator, problem="What is autogen?")
+ragproxyagent.initiate_chat(assistant, message=ragproxyagent.message_generator, problem="What is an association callback in Rails active record?")
