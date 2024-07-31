@@ -12,3 +12,7 @@
 3. separately run app
 
 `env AUTOGEN_USE_DOCKER=False poetry run python main.py`
+
+4. you may have to remove tmp folder on rerun
+
+TODO seperate build chroma db from inference flow
